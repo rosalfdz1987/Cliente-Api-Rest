@@ -44,11 +44,11 @@ public class ApiRestApplication {
 		
 		//borrar 
 		
-	   clienteRepositorio.deleteById("E24324");
+	  // clienteRepositorio.deleteById("E24324");
 	   
 	   System.out.println(clienteRepositorio.findAll().size());
 	   
-	   System.out.println(clienteRepositorio.findAll());
+	  
 		
 		
 		
