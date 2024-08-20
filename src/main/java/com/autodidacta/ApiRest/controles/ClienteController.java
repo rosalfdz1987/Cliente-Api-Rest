@@ -3,6 +3,7 @@ package com.autodidacta.ApiRest.controles;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +14,7 @@ import com.autodidacta.ApiRest.entidades.Cliente;
 import com.autodidacta.ApiRest.repositorios.ClienteRepositorio;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 
 
 @RestController
@@ -98,7 +100,9 @@ public class ClienteController {
 	}
 	
 	@PostMapping("api/cliente")
-	public Cliente create(@RequestBody Cliente cliente) {
+	public Cliente create(@RequestBody Cliente cliente,  @RequestHeader HttpHeaders headers) {
+		
+		System.out.println(headers.get("User-Agent")); //para ller las cabeseras
 		
 		return clienteRepositorio.save(cliente);
 		
