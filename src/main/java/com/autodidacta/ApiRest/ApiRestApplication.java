@@ -22,13 +22,13 @@ public class ApiRestApplication {
 		ClienteRepositorio clienteRepositorio =context.getBean(ClienteRepositorio.class);
 		
 		Cliente cliente1 = new Cliente();
-		cliente1.setRut("E435435");
+		cliente1.setRut("1");
 		cliente1.setEmail("wewr@gmail.com");
 		cliente1.setTelefono("2312432");	
 		cliente1.setCreateAt(LocalDate.of(2023, 10, 15));
 		
 		Cliente cliente2 = new Cliente();
-		cliente2.setRut("E24324");
+		cliente2.setRut("2");
 		cliente2.setEmail("sfe@gmail.com");
 		cliente2.setTelefono("345432");	
 		cliente1.setCreateAt(LocalDate.of(2023, 12,5));
